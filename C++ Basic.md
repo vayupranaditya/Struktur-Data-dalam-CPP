@@ -46,7 +46,8 @@ int main(){
     std::cin >> n; //fungsi input
 
     /*
-    string variable secara default tidak dapat digunakan kecuali menggunakan library string atau menggunakan compile mode standar 2011 keatas
+    string variable secara default tidak dapat digunakan kecuali menggunakan library string 
+    atau menggunakan compile mode standar 2011 keatas
 */
 
     char str1[10] = "hallo"; //sebuah string di assign kedalam sebuah array of char
