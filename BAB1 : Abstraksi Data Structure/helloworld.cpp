@@ -1,4 +1,9 @@
+/*
 
+    file ini adalah bagian implementasi yang
+    menguraikan isi dari bagian dari astraksi/definisi
+
+*/
 
 #include <iostream>
 #include "helloworld.h"
