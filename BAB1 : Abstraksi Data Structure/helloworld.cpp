@@ -25,6 +25,7 @@ int penjumlahan(int a, int b){
 void showData(int tab[], int length){
     for(int index = 0; index < length; index++)
     {
-        cout << tab[index];
+        cout << tab[index] ;
     }
+    cout << '\n';
 }
