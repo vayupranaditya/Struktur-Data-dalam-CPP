@@ -32,15 +32,32 @@ int main(){
     //yang ditulis dalam format hexadecimal
     //lokasi tersebut yang disebut dengan address
 
+    //berikut adalah pointer ditandai dengan simbol *
+    //pointer adalah sebuah data type yang menyimpan
+    //sebuah address
     int *p = &a; 
 
-    cout << p << '\n';
-    cout << *p << '\n';
+    cout << p << '\n'; //akan menghasilkan address yang disimpan
+    cout << *p << '\n';//akan menghasilkan data yang disimpan pada
+    //address 
 
+
+    //karena sebuah pointer menyimpan sebuah address
+    //maka jika kita merubah value/data yang disimpan
+    //pada variable yang asli( dalam hal ini variable a)
     a = 30;
 
+
+    //maka : 
     cout << "nilai a : " << a  << '\n';
     cout << "nilai pointer : " << *p << '\n';
+    //terlihat  *p  menghasilkan nilai yang sama dengan a
+    //hal ini terjadi karena pointer p menyimpan 
+    //address dari a
+    //sehingga ketika kita mengouput *p kita aka mendapakan data
+    //yang tersimpan pada address yang disimpan pada p
+    //yaitu adalah address a
+    //dan address a menyimpan data dari a
 
     return 0;
 }
