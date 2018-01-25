@@ -41,7 +41,6 @@ int main(){
     cout << *p << '\n';//akan menghasilkan data yang disimpan pada
     //address 
 
-ramm
     //karena sebuah pointer menyimpan sebuah address
     //maka jika kita merubah value/data yang disimpan
     //pada variable yang asli( dalam hal ini variable a)
