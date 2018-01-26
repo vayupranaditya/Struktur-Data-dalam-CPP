@@ -20,3 +20,20 @@ Mahasiswa newMHS(std::string nama, int nilai, Mahasiswa* next){
 
     return tmp;
 }
+
+void sortMHS(Mahasiswa *mhs, int length){
+    for(int i = 0; i < length - 1; i++){
+        
+        int curr = i + 1;
+        int iMax = curr;
+
+        for(int j = curr; j < length; j++){
+            if(mhs[iMax].nilai < mhs[j].nilai && mhs[j].nilai < mhs[i].nilai ){
+                iMax = j;
+            }
+        }
+
+        mhs[i].next = &mhs[iMax];
+
+    }
+}
