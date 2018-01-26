@@ -5,6 +5,7 @@ using namespace std;
 
 Mahasiswa test;
 Mahasiswa test1;
+Mahasiswa test2;
 
 int main()
 {
@@ -12,10 +13,10 @@ int main()
     test.nilai = 10;
     test.next = &test1;
 
-    test1.nama = "andi";
-    test1.next = nullptr;
+    test1 = newMHS("andi", 10, &test2);
+    test2 = newMHS("caca", 9, nullptr);
 
-    cout << test.next->nama << '=' << test1.nama;
+    cout << test.next->next->nama << '\n';
 
     return 0;
 }
