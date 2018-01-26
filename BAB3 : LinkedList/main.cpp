@@ -4,7 +4,7 @@
 using namespace std;
 
 Mahasiswa first;
-Mahasiswa MHSlist[3] = {newMHS("a",10), newMHS("b",9), newMHS("c",8)} ;
+Mahasiswa MHSlist[3] = {newMHS("a",7), newMHS("b",9), newMHS("c",8)} ;
 
 
 int main()

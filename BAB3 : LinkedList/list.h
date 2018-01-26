@@ -8,5 +8,3 @@ struct Mahasiswa{
 
 Mahasiswa newMHS(std::string nama, int nilai);
 Mahasiswa newMHS(std::string nama, int nilai, Mahasiswa* next);
-
-void sortMHS(Mahasiswa *mhs, int length);
