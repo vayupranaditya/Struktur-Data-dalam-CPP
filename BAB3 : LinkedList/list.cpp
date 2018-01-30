@@ -1,7 +1,4 @@
 #include "list.h"
-#include <iostream>
-
-using namespace std;
 
 Mahasiswa newMHS(string nama, string  NIM){
     Mahasiswa tmp;
@@ -42,39 +39,72 @@ void insertLast(listMhs &L, Mahasiswa &P){
     if(L.first == nullptr){
         L.first = &P;
     }else{
-        Mahasiswa* prev = new Mahasiswa;
         Mahasiswa* curr = L.first;
         
         while(curr->next){
-            prev = curr;
             curr = curr->next;
         }
-        prev->next = &P;
+        curr->next = &P;
     }
 
 }
 
 void insertAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
-    Mahasiswa* prev = new Mahasiswa;
     Mahasiswa* curr = L.first;
     
     while(curr->next){
-        prev = curr;
         curr = curr->next;
     }
 
     if(
-        prev->nama == P.nama &&
-        prev->NIM == P.nama
+        curr->nama == P.nama &&
+        curr->NIM == P.nama
     ){
-        prev->next = &P;
+        curr->next = &P;
     }else{
         cout << &P.nama << "data refrence not found in the list";
     }
     
 }
 
-void deleteFirst(){}
+void deleteFirst(listMhs &L){
+    Mahasiswa* tmp = L.first;
+    L.first = L.first->next;
+    tmp->next = nullptr;
+}
+
+void deleteLast(listMhs &L){
+    if(L.first == nullptr){
+       deleteFirst(L);
+    }else{
+        Mahasiswa*prev = new Mahasiswa;
+        Mahasiswa* curr = L.first;
+        
+        while(curr->next){
+            prev = curr;
+            curr = curr->next;
+        }
+        prev->next = nullptr;
+    }
+}
+
+void deleteAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
+    Mahasiswa* curr = L.first;
+    
+    while(curr->next){
+        curr = curr->next;
+    }
+
+    if(
+        curr->nama == P.nama &&
+        curr->NIM == P.nama
+    ){
+        curr = nullptr;
+    }else{
+        cout << &P.nama << "data refrence not found in the list";
+    }
+    
+}
 
 void printData(listMhs &L){
     Mahasiswa* curr = L.first;

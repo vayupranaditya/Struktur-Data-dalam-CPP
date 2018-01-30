@@ -14,8 +14,12 @@ int main()
 
     listMhs L = makeList();
     
+    
+
     insertLast(L, XXXX);
     
+    cout << L.first->nama + '\n';
+
     printData(L);
 
 
@@ -23,6 +27,10 @@ int main()
     insertFirst(L, KKKK);
     insertLast(L, LLLL);
    
+    printData(L);
+
+    deleteFirst(L);
+    deleteLast(L);
     printData(L);
 
 
