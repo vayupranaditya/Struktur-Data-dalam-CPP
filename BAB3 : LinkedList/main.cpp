@@ -1,3 +1,11 @@
+/*
+    TODO:
+    []LengthList
+    []invertList
+    []copyList
+
+*/
+
 #include <iostream>
 #include "list.h"
 
@@ -34,12 +42,5 @@ int main()
     printData(L);
 
 
-
-    //cout << L.first->nama<< '\n';
-
-    // //L.first->next->next = &XXXX;
-    // insertLast(L, XXXX);
-    // cout << L.first->next->next->nama << '\n';
-    
     return 0;
 }
