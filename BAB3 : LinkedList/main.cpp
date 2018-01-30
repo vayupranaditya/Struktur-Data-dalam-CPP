@@ -3,6 +3,7 @@
     []LengthList
     []invertList
     []copyList
+    []deleteNIM
 
 */
 
