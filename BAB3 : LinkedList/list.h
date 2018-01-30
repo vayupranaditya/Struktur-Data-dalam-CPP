@@ -12,21 +12,22 @@ struct Mahasiswa{
 
 struct listMhs{
     Mahasiswa* first;
+    int length;
 };
 
-listMhs makeList(listMhs &L);
-void insertFirst(listMhs &L, Mahasiswa* &P);
-void insertLast(listMhs &L, Mahasiswa* &P);
-void InsertAfter(listMhs &L, Mahasiswa* &P);
+listMhs makeList();
+void insertFirst(listMhs &L, Mahasiswa &P);
+void insertLast(listMhs &L, Mahasiswa &P);
+void insertAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data);
 
-void DeleteFirst(listMhs &L);
-void DeleteLast(listMhs &L);
-void DeleteAfter(listMhs &L);
-void DeleteNIM(listMhs &L,  string NIM);
+void deleteFirst(listMhs &L);
+void deleteLast(listMhs &L);
+void deleteAfter(listMhs &L);
+void deleteNIM(listMhs &L,  string NIM);
 
 void LengthList(listMhs &L);
 void invertList(listMhs &L);
-void printData(listMhs &L, Mahasiswa* &P);
+void printData(listMhs &L);
 void copyList(listMhs &L1, listMhs &L2);
 
 
