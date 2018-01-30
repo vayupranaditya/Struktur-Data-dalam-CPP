@@ -3,20 +3,24 @@
 
 using namespace std;
 
-Mahasiswa newMHS(string nama, int nilai){
-    Mahasiswa tmp;
+Mahasiswa newMHS(string nama, string  NIM){
+    Mahasiswa tmp = new Mahasiswa;
     tmp.nama = nama;
-    tmp.nilai = nilai;
-
+    tmp.NIM = NIM;
+    
     return tmp;
-
 }
 
-Mahasiswa newMHS(std::string nama, int nilai, Mahasiswa* next){
-    Mahasiswa tmp;
-    tmp.nama = nama;
-    tmp.nilai = nilai;
-    tmp.next = next;
 
+Mahasiswa newMHS(string nama, string  NIM, int nilai){
+    Mahasiswa tmp = new Mahasiswa;
+    tmp.nama = nama;
+    tmp.NIM = NIM;
+    tmp.nilai = nilai;
+    
     return tmp;
+}
+
+listMhs makeList(){
+    return new listMhs;
 }
