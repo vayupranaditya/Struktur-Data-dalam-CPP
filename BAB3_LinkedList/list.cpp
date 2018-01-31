@@ -5,7 +5,7 @@ Mahasiswa newMHS(string nama, string  NIM){
     tmp.nama = nama;
     tmp.NIM = NIM;
     tmp.next = nullptr;
-    
+
     return tmp;
 }
 
@@ -40,7 +40,7 @@ void insertLast(listMhs &L, Mahasiswa &P){
         L.first = &P;
     }else{
         Mahasiswa* curr = L.first;
-        
+
         while(curr->next){
             curr = curr->next;
         }
@@ -51,7 +51,7 @@ void insertLast(listMhs &L, Mahasiswa &P){
 
 void insertAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
     Mahasiswa* curr = L.first;
-    
+
     while(curr->next){
         curr = curr->next;
     }
@@ -64,7 +64,7 @@ void insertAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
     }else{
         cout << &P.nama << "data refrence not found in the list";
     }
-    
+
 }
 
 void deleteFirst(listMhs &L){
@@ -79,7 +79,7 @@ void deleteLast(listMhs &L){
     }else{
         Mahasiswa*prev = new Mahasiswa;
         Mahasiswa* curr = L.first;
-        
+
         while(curr->next){
             prev = curr;
             curr = curr->next;
@@ -90,7 +90,7 @@ void deleteLast(listMhs &L){
 
 void deleteAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
     Mahasiswa* curr = L.first;
-    
+
     while(curr->next){
         curr = curr->next;
     }
@@ -103,7 +103,7 @@ void deleteAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
     }else{
         cout << &P.nama << "data refrence not found in the list";
     }
-    
+
 }
 
 void printData(listMhs &L){
@@ -115,4 +115,18 @@ void printData(listMhs &L){
         curr = curr->next;
     }
     cout << '\n';
+}
+
+void lengthList(listMhs &L){
+    if(L.first == nullptr){
+        cout << 0;
+    }else{
+        Mahasiswa* curr = L.first;
+        int length = 1;
+        while(curr->next){
+            curr = curr->next;
+            length++;
+        }
+        cout << length << '\n';
+    }
 }

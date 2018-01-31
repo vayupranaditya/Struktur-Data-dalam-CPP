@@ -25,11 +25,10 @@ void deleteLast(listMhs &L);
 void deleteAfter(listMhs &L);
 void deleteNIM(listMhs &L,  string NIM);
 
-void LengthList(listMhs &L);
+void lengthList(listMhs &L);
 void invertList(listMhs &L);
 void printData(listMhs &L);
 void copyList(listMhs &L1, listMhs &L2);
-
 
 Mahasiswa newMHS(string nama, string NIM);
 Mahasiswa newMHS(string nama, string NIM, int nilai);

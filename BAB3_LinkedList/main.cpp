@@ -1,6 +1,5 @@
-/*
+  /*
     TODO:
-    []LengthList
     []invertList
     []copyList
     []deleteNIM
@@ -22,24 +21,27 @@ int main()
     Mahasiswa LLLL = newMHS("LLLL", "9999999999");
 
     listMhs L = makeList();
-    
-    
+
+
 
     insertLast(L, XXXX);
-    
+
     cout << L.first->nama + '\n';
 
+    lengthList(L);
     printData(L);
 
 
     insertFirst(L, DANU);
     insertFirst(L, KKKK);
     insertLast(L, LLLL);
-   
+
+    lengthList(L);
     printData(L);
 
     deleteFirst(L);
     deleteLast(L);
+    lengthList(L);
     printData(L);
 
 
