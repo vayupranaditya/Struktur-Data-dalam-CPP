@@ -1,5 +1,6 @@
 # Data Structure Dalam C++
 
+
 Baca basic guide syntax c++ [disini](https://github.com/BrotherCode1/Struktur-Data-dalam-CPP/blob/master/C%2B%2B%20Basic.md)
 
 ## Compile c++ using g++ compiler
@@ -30,3 +31,9 @@ adapun untuk mengcompile beberapa file menjadi satu anda dapat melakukan hal ber
     //atau
     g++ -std=c++11 file1.cpp file2.cpp fileN.cpp -o output.exe
 ```
+
+---------------------------------------------------------------------------
+
+| Author | Contributor |
+|-------|-------------|
+|[Ganesha Danu](http://www.github.com/BlinfoldKing)|
