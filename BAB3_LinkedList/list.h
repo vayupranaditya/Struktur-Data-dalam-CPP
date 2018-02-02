@@ -25,7 +25,7 @@ void deleteLast(listMhs &L);
 void deleteAfter(listMhs &L);
 void deleteNIM(listMhs &L,  string NIM);
 
-void lengthList(listMhs &L);
+int lengthList(listMhs &L);
 void invertList(listMhs &L);
 void printData(listMhs &L);
 void copyList(listMhs &L1, listMhs &L2);

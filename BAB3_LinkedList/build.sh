@@ -1,0 +1,1 @@
+g++ main.cpp list.cpp -o ../build/list && ../build/list

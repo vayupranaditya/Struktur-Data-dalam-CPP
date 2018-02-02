@@ -1,4 +1,6 @@
 #include "list.h"
+#define next(P) (P)->next
+#define first(L) ((L).first)
 
 Mahasiswa newMHS(string nama, string  NIM){
     Mahasiswa tmp;
@@ -8,7 +10,6 @@ Mahasiswa newMHS(string nama, string  NIM){
 
     return tmp;
 }
-
 
 Mahasiswa newMHS(string nama, string  NIM, int nilai){
     Mahasiswa tmp;
@@ -21,46 +22,45 @@ Mahasiswa newMHS(string nama, string  NIM, int nilai){
 
 listMhs makeList(){
     listMhs L;
-    L.length = 0;
-    L.first = nullptr;
+    first(L) = nullptr;
 
     return L;
 }
 
 void insertFirst(listMhs &L, Mahasiswa &P){
-    if(L.first != nullptr){
-        P.next = L.first;
+    if(first(L) != nullptr){
+        next(&P) = first(L);
     }
-    L.first = &P;
+    first(L) = &P;
 }
 
 void insertLast(listMhs &L, Mahasiswa &P){
 
-    if(L.first == nullptr){
-        L.first = &P;
+    if(first(L) == nullptr){
+        first(L) = &P;
     }else{
-        Mahasiswa* curr = L.first;
+        Mahasiswa* curr = first(L);
 
-        while(curr->next){
-            curr = curr->next;
+        while(next(curr)){
+            curr = next(curr);
         }
-        curr->next = &P;
+        next(curr) = &P;
     }
 
 }
 
 void insertAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
-    Mahasiswa* curr = L.first;
+    Mahasiswa* curr = first(L);
 
-    while(curr->next){
-        curr = curr->next;
+    while(next(curr)){
+        curr = next(curr);
     }
 
     if(
         curr->nama == P.nama &&
         curr->NIM == P.nama
     ){
-        curr->next = &P;
+        next(curr) = &P;
     }else{
         cout << &P.nama << "data refrence not found in the list";
     }
@@ -68,31 +68,31 @@ void insertAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
 }
 
 void deleteFirst(listMhs &L){
-    Mahasiswa* tmp = L.first;
-    L.first = L.first->next;
+    Mahasiswa* tmp = first(L);
+    first(L) = first(L)->next;
     tmp->next = nullptr;
 }
 
 void deleteLast(listMhs &L){
-    if(L.first == nullptr){
+    if(first(L) == nullptr){
        deleteFirst(L);
     }else{
         Mahasiswa*prev = new Mahasiswa;
-        Mahasiswa* curr = L.first;
+        Mahasiswa* curr = first(L);
 
-        while(curr->next){
+        while(next(curr)){
             prev = curr;
-            curr = curr->next;
+            curr = next(curr);
         }
         prev->next = nullptr;
     }
 }
 
 void deleteAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
-    Mahasiswa* curr = L.first;
+    Mahasiswa* curr = first(L);
 
-    while(curr->next){
-        curr = curr->next;
+    while(next(curr)){
+        curr = next(curr);
     }
 
     if(
@@ -107,26 +107,26 @@ void deleteAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
 }
 
 void printData(listMhs &L){
-    Mahasiswa* curr = L.first;
+    Mahasiswa* curr = first(L);
     while(curr){
         cout << curr->nama << '\n';
         cout << curr->NIM << '\n';
 
-        curr = curr->next;
+        curr = next(curr);
     }
     cout << '\n';
 }
 
-void lengthList(listMhs &L){
-    if(L.first == nullptr){
+int lengthList(listMhs &L){
+    if(first(L) == nullptr){
         cout << 0;
     }else{
-        Mahasiswa* curr = L.first;
+        Mahasiswa* curr = first(L);
         int length = 1;
-        while(curr->next){
-            curr = curr->next;
+        while(next(curr)){
+            curr = next(curr);
             length++;
         }
-        cout << length << '\n';
+        return length;
     }
 }
