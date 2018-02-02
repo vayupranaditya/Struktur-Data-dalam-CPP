@@ -12,8 +12,7 @@
 using namespace std;
 
 
-int main()
-{
+int main(){
 
     Mahasiswa DANU = newMHS("danu", "1301174223");
     Mahasiswa KKKK = newMHS("KKKK", "1234567890");

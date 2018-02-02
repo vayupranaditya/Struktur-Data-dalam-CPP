@@ -1,6 +1,8 @@
 #include "list.h"
-#define next(P) (P)->next
+
+#define next(P) ((P)->next)
 #define first(L) ((L).first)
+
 
 Mahasiswa newMHS(string nama, string  NIM){
     Mahasiswa tmp;
