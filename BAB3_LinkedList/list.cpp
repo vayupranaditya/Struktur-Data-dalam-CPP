@@ -2,13 +2,14 @@
 
 #define next(P) ((P)->next)
 #define first(L) ((L).first)
+#define nama(Q) ((Q)->nama)
 
 
 Mahasiswa newMHS(string nama, string  NIM){
     Mahasiswa tmp;
     tmp.nama = nama;
     tmp.NIM = NIM;
-    tmp.next = nullptr;
+    tmp.next = NULL;
 
     return tmp;
 }
@@ -18,19 +19,19 @@ Mahasiswa newMHS(string nama, string  NIM, int nilai){
     tmp.nama = nama;
     tmp.NIM = NIM;
     tmp.nilai = nilai;
-    tmp.next = nullptr;
+    tmp.next = NULL;
     return tmp;
 }
 
 listMhs makeList(){
     listMhs L;
-    first(L) = nullptr;
+    first(L) = NULL;
 
     return L;
 }
 
 void insertFirst(listMhs &L, Mahasiswa &P){
-    if(first(L) != nullptr){
+    if(first(L) != NULL){
         next(&P) = first(L);
     }
     first(L) = &P;
@@ -38,7 +39,7 @@ void insertFirst(listMhs &L, Mahasiswa &P){
 
 void insertLast(listMhs &L, Mahasiswa &P){
 
-    if(first(L) == nullptr){
+    if(first(L) == NULL){
         first(L) = &P;
     }else{
         Mahasiswa* curr = first(L);
@@ -59,7 +60,7 @@ void insertAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
     }
 
     if(
-        curr->nama == P.nama &&
+        nama(&P) == P.nama &&
         curr->NIM == P.nama
     ){
         next(curr) = &P;
@@ -72,11 +73,11 @@ void insertAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
 void deleteFirst(listMhs &L){
     Mahasiswa* tmp = first(L);
     first(L) = first(L)->next;
-    tmp->next = nullptr;
+    tmp->next = NULL;
 }
 
 void deleteLast(listMhs &L){
-    if(first(L) == nullptr){
+    if(first(L) == NULL){
        deleteFirst(L);
     }else{
         Mahasiswa*prev = new Mahasiswa;
@@ -86,7 +87,7 @@ void deleteLast(listMhs &L){
             prev = curr;
             curr = next(curr);
         }
-        prev->next = nullptr;
+        prev->next = NULL;
     }
 }
 
@@ -101,7 +102,7 @@ void deleteAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
         curr->nama == P.nama &&
         curr->NIM == P.nama
     ){
-        curr = nullptr;
+        curr = NULL;
     }else{
         cout << &P.nama << "data refrence not found in the list";
     }
@@ -120,7 +121,7 @@ void printData(listMhs &L){
 }
 
 int lengthList(listMhs &L){
-    if(first(L) == nullptr){
+    if(first(L) == NULL){
         cout << 0;
     }else{
         Mahasiswa* curr = first(L);
