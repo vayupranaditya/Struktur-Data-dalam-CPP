@@ -58,6 +58,7 @@ void insertLast(listMhs &L, Mahasiswa &P){
     }
 }
 
+/*
 void insertAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
     Mahasiswa* curr = first(L);
 
@@ -75,6 +76,7 @@ void insertAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
     }
 
 }
+*/
 
 void deleteFirst(listMhs &L){
     Mahasiswa* tmp = first(L);
@@ -112,6 +114,7 @@ void deleteLast(listMhs &L){
 
 }
 
+/*
 void deleteAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
     Mahasiswa* curr = first(L);
 
@@ -129,6 +132,7 @@ void deleteAfter(listMhs &L, Mahasiswa &P, Mahasiswa &Data){
     }
 
 }
+*/
 
 void printData(listMhs &L){
     Mahasiswa* curr = first(L);
