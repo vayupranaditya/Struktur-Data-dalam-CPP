@@ -36,4 +36,5 @@ adapun untuk mengcompile beberapa file menjadi satu anda dapat melakukan hal ber
 
 | Author | Contributor |
 |-------|-------------|
-|[Ganesha Danu](http://www.github.com/BlinfoldKing)|
+|[Ganesha Danu](http://www.github.com/BlinfoldKing)|[Vayupranaditya](https://github.com/vayupranaditya)|
+|  |[Eko Hardiyanto](http://github.com/ehardi19)|
